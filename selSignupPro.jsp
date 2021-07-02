@@ -13,7 +13,7 @@
 	<jsp:setProperty property="*" name="dto" />
 	
 <%
-	SellerDAO dao = new SellerDAO(); 
+	SellerDAO dao = new SellerDAO();
 	dao.insertSeller(dto);
 	
 	response.sendRedirect("main.jsp"); // 바로 이동

@@ -56,8 +56,8 @@ public class MemberDAO {
     		  conn = getConnection();
     		  String sql = "select * from member where id=? and pw=?";
     		  pstmt = conn.prepareStatement(sql);
-    		  pstmt.setString(1, id);
-    		  pstmt.setString(2, pw);
+    		  pstmt. setString(1, id);
+    		  pstmt. setString(2, pw);
     		  
     		  rs = pstmt.executeQuery();
     		  if(rs.next()) {

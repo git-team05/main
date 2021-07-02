@@ -9,6 +9,7 @@
 <body>
 	<%
 		// 로그아웃 처리 
+		
 		session.invalidate(); // 세션 속성 전체 삭제 
 		response.sendRedirect("main.jsp"); // 메인으로 이동 
 	%>

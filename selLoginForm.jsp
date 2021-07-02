@@ -4,9 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-	<title>Insert title here</title>
-	</head>
-	<link href="selLoginForm.css" rel="stylesheet" type="text/css" >
+<title>Insert title here</title>
+</head>
 <body>
 
 	<br />

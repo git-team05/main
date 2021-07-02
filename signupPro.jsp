@@ -13,7 +13,7 @@
    <jsp:setProperty property="*" name="dto" />
 
 <%
-    MemberDAO dao = new MemberDAO(); 
+    MemberDAO dao = new MemberDAO();
     dao.insertMember(dto);
    
     response.sendRedirect("main.jsp"); // 바로 이동

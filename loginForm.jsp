@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>개인 로그인창</title>
+	<title>Insert title here</title>
 </head>
 	<link href="loginForm.css" rel="stylesheet" type="text/css" >
 <body>
@@ -29,8 +29,7 @@
 			<tr>
 				<td colspan="2">
 				<input type="checkbox" name="auto" value="1" /> 
-				<input type="button"  value="회원가입"  onclick="window.location='signupMain.jsp'" />		
-				<input type="button"  value="기업 로그인"  onclick="window.location='selLoginForm.jsp'" />	 
+				<input type="button"  value="회원가입"  onclick="window.location='signupMain.jsp'" />		 
 				</td>
 			</tr>		
 		</table>

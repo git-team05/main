@@ -16,7 +16,7 @@
 	String auto = request.getParameter("auto"); //자동 로그인 체크 박스 값
 	
 	//로그인 체크
-	MemberDAO dao = new MemberDAO(); 
+	MemberDAO dao = new MemberDAO();
 	boolean res = dao.idPwCheck(id,pw); 
 	
 	if(res){
