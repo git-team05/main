@@ -1,0 +1,9 @@
+@charset "UTF-8";
+td{
+	border-collapse : collapse;
+}
+
+table{ 
+	margin: auto;
+	text-align:center;
+}
