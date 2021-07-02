@@ -41,7 +41,7 @@
 			<ul>
 				<li><a id="logo" href="main.jsp">Logo</a></li>
 				<li id="menu01" > <a href="/team05/product/groupMain.jsp">공동구매</a> </li> <!-- 공동 구매 페이지로 이동 -->
-				<li id="menu02" > <a href="/team05/comming/commingSoonMain">오픈예정</a> </li> <!-- 오픈 예정 페이지로 이동 -->
+				<li id="menu02" > <a href="/team05/comming/commingSoonMain.jsp">오픈예정</a> </li> <!-- 오픈 예정 페이지로 이동 -->
 				<li id="menu02" > <a href="/team05/jjim/opensellMain.jsp">공동구매 요청</a> </li>	<!-- 공동 구매 요청 페이지로 이동 -->
 			</ul>	
 			
