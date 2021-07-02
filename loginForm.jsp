@@ -6,12 +6,17 @@
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
 </head>
+	<%
+		request.setCharacterEncoding("UTF-8");
+		String proNum = request.getParameter("proNum");
+	%>
 	<link href="loginForm.css" rel="stylesheet" type="text/css" >
 <body>
 <br />
 	<h1 align="center"> 로그인 </h1>
 	
-	<form action="loginPro.jsp" method="get">
+	<form action="loginPro.jsp" method="post">
+		<input type="hidden" name="proNum" value="<%=proNum%>"/>
 		<table>
 			<tr>
 				<td>아이디</td>

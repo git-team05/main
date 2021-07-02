@@ -14,6 +14,8 @@
 	String id = request.getParameter("id");
 	String pw = request.getParameter("pw");
 	String auto = request.getParameter("auto"); //자동 로그인 체크 박스 값
+	String proNum = request.getParameter("proNum");
+	System.out.println("pronum : " + proNum);
 	
 	//로그인 체크
 	MemberDAO dao = new MemberDAO();
@@ -21,7 +23,11 @@
 	
 	if(res){
 		session.setAttribute("memId", id); // == 로그인 처리
-		response.sendRedirect("main.jsp"); // Main 으로 이동
+	 	if(proNum != null) { 
+	 		response.sendRedirect("/team05/product/productContent.jsp?proNum=" + proNum);
+		} else {
+			response.sendRedirect("main.jsp"); // Main 으로 이동
+		}
 	}else{ %>
 		<script>
 		alert("아이디 또는 비밀번호가 일치하지 않습니다. 다시 시도해주세요");
