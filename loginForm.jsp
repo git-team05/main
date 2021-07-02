@@ -16,7 +16,9 @@
 	<h1 align="center"> 로그인 </h1>
 	
 	<form action="loginPro.jsp" method="post">
-		<input type="hidden" name="proNum" value="<%=proNum%>"/>
+	<%	if(proNum != null) { %>
+			<input type="hidden" name="proNum" value="<%=proNum%>"/>
+	<% 	}	%>
 		<table>
 			<tr>
 				<td>아이디</td>

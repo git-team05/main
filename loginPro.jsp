@@ -15,15 +15,14 @@
 	String pw = request.getParameter("pw");
 	String auto = request.getParameter("auto"); //자동 로그인 체크 박스 값
 	String proNum = request.getParameter("proNum");
-	System.out.println("pronum : " + proNum);
 	
 	//로그인 체크
-	MemberDAO dao = new MemberDAO();
+	MemberDAO dao = new MemberDAO(); 
 	boolean res = dao.idPwCheck(id,pw); 
 	
 	if(res){
 		session.setAttribute("memId", id); // == 로그인 처리
-	 	if(proNum != null) { 
+	 	if(request.getParameter("proNum") != null) { 
 	 		response.sendRedirect("/team05/product/productContent.jsp?proNum=" + proNum);
 		} else {
 			response.sendRedirect("main.jsp"); // Main 으로 이동
