@@ -4,14 +4,25 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>로그아웃 처리</title>
 </head>
 <body>
 	<%
-		// 로그아웃 처리 
-		
 		session.invalidate(); // 세션 속성 전체 삭제 
+		
+		Cookie[] coos = request.getCookies();
+		if(coos != null){
+			for(Cookie c : coos){
+				if(c.getName().equals("autoId") || c.getName().equals("autoOPw") || c.getName().equals("autoCh"))  {
+					c.setMaxAge(0);
+					response.addCookie(c);
+			}
+				
+		}
+	}
+		
 		response.sendRedirect("main.jsp"); // 메인으로 이동 
+		
 	%>
 </body>
 </html>

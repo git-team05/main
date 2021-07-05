@@ -16,7 +16,7 @@
          <tr>
             <td>아이디</td>
             <td>
-               <input type="text" name="id" /> 
+               <input type="text" name="id" maxlength="12"/> 
             </td>
             <td>
                <input type="button" value="중복" onclick="confirmId(this.form)" /> 
@@ -25,13 +25,13 @@
          <tr>
             <td>비밀번호</td>
             <td>
-               <input type="password" name="pw" /> 
+               <input type="password" name="pw" maxlength="12"/> 
             </td>
          </tr>
          <tr>
             <td>비밀번호 확인</td>
             <td>
-               <input type="password" name="pwCh" /> 
+               <input type="password" name="pwCh" maxlength="12"/> 
             </td>
          </tr>
          <tr>

@@ -26,7 +26,7 @@ public class SellerDAO {
 		
 		try {
 			conn = getConnection();
-			String sql = "insert into seller values(?,?,?,?,?,?,?,?,?,?,?,?,?sysdate)"; //values 들어가는 순서
+			String sql = "insert into seller values(?,?,?,?,?,?,?,?,?,?,?,?,?,sysdate)"; //values 들어가는 순서
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, dto.getId());
 			pstmt.setString(2, dto.getPw());

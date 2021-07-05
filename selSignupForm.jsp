@@ -16,7 +16,7 @@
 			<tr>
 				<td>아이디</td>
 				<td>
-					<input type="text" name="id" /> 
+					<input type="text" name="id" maxlength="12"/> 
 				</td>
 				<td>
 					<input type="button" value="중복" /> 
@@ -25,13 +25,13 @@
 			<tr>
 				<td>비밀번호</td>
 				<td>
-					<input type="password" name="pw" /> 
+					<input type="password" name="pw" maxlength="12"/> 
 				</td>
 			</tr>
 			<tr>
 				<td>비밀번호 확인</td>
 				<td>
-					<input type="password" name="pwCh" /> 
+					<input type="password" name="pwCh" maxlength="12"/> 
 				</td>
 			</tr>
 			<tr>
@@ -55,50 +55,50 @@
 			<tr>
 				<td>사업장 상호</td>
 				<td>
-					<input type="text" name="selname" /> 
+					<input type="text" name="bizname" /> 
 				</td>
 			</tr>
 			<tr>
 				<td>사업자 번호</td>
 				<td>
-					<input type="text" name="selnum" /> 
+					<input type="text" name="biznum" /> 
 				</td>
 			</tr>
 			<tr>
 				<td>사업자 주소</td>
 				<td>
-					<input type="text" name="selpost" /> 
+					<input type="text" name="bizaddress" /> 
 				</td>
 			</tr>
 			<tr>
 				<td>대표자명</td>
 				<td>
-					<input type="text" name="rp_name" /> 
+					<input type="text" name="ceoname" /> 
 				</td>
 			</tr>
 			<tr>
 				<td>대표자 전화번호</td>
 				<td>
-					<input type="text" name="rp_phone_number" /> 
+					<input type="text" name="biztel" /> 
 				</td>
 			</tr>
 			<tr>
 				<td>담당자 이름</td>
 				<td>
-					<input type="text" name="tpic_name" /> 
+					<input type="text" name="managername" /> 
 				</td>
 			</tr>
 			
 			<tr>
 				<td>담당자 이메일</td>
 				<td>
-					<input type="text" name="tpic_name" /> 
+					<input type="text" name="manageremail" /> 
 				</td>
 			</tr>
 			<tr>
 				<td>웹 사이트</td>
 				<td>
-					<input type="text" name="web_site" /> 
+					<input type="text" name="website" /> 
 				</td>
 			</tr>
 			<tr>

@@ -2,44 +2,42 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
+	<head>
 	<meta charset="UTF-8">
-	<title>Insert title here</title>
-</head>
-	<%
-		request.setCharacterEncoding("UTF-8");
-		String proNum = request.getParameter("proNum");
-	%>
+	<title>로그인 폼</title>
 	<link href="loginForm.css" rel="stylesheet" type="text/css" >
-<body>
-<br />
-	<h1 align="center"> 로그인 </h1>
+	</head>
 	
-	<form action="loginPro.jsp" method="post">
-	<%	if(proNum != null) { %>
-			<input type="hidden" name="proNum" value="<%=proNum%>"/>
-	<% 	}	%>
-		<table>
-			<tr>
-				<td>아이디</td>
-				<td><input type="text" name="id" /></td>
-			</tr>
-			<tr>
-				<td>비밀번호</td>
-				<td><input type="password" name="pw" /></td>
-			</tr>
-			<tr>
-				<td>
-				<input type="submit" value="로그인"  />
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-				<input type="checkbox" name="auto" value="1" /> 
-				<input type="button"  value="회원가입"  onclick="window.location='signupMain.jsp'" />		 
-				</td>
-			</tr>		
-		</table>
-	</form>
+<body>
+<form action="loginPro.jsp" method="get">
+	<div class="main-container">
+		<div class="main-wrap">
+			<section class="login-input-section-wrap">
+					<div class="login-input-wrap">	
+						<input placeholder="Username" type="text" name="id" maxlength="12"></input>
+					</div>
+					
+					<div class="login-input-wrap password-wrap">	
+						<input placeholder="Password" type="password" name="pw" maxlength="12"></input>
+					</div>
+					
+					<div class="login-button-wrap">
+						<button type="submit" value="로그인">Sign in </button>
+					</div>
+					
+					<div class="login-stay-sign-in">
+						<input type="checkbox" name="auto" value="1" >자동 로그인</input>
+						<lable> <input type="radio" name="kinds" value="member" checked="checked"/>회원 로그인</lable>
+						<lable> <input type="radio" name="kinds" value="seller"/>기업 로그인</lable>
+					</div>
+					<footer>
+						<div class="copyright-wrap">
+							<span>	 Copyright © team05 project . All Rights Reserved.</span>
+						</div>
+					</footer>
+			</section>	
+		</div>	
+	</div>
+</form>
 </body>
 </html>
