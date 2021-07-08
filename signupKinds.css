@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+body{
+	margin:0 px;
+	padding: 0px;
+	background-color:#f5f6f7;
+}
+
+img{
+	width: 225px;
+	height: 225px;
+	margin: 22px;
+	position:relative;
+	top: 200px;
+}
+#signupimg{
+	text-align: center;
+}
