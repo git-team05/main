@@ -9,13 +9,17 @@
 	</head>
 	<%
 		request.setCharacterEncoding("UTF-8");
-		String proNum = request.getParameter("proNum");
+		String uri = request.getParameter("uri");
+		String quantity = request.getParameter("quantity");
 	%>
 <body>
 <form action="loginPro.jsp" method="get">
-<%	if(proNum != null) { %>
-			<input type="hidden" name="proNum" value="<%=proNum%>"/>
-<% 	}	%>
+	<%	if(uri != null) { %>
+			<input type="hidden" name="uri" value="<%=uri%>"/>
+	<% 	}	%>
+	<%	if(quantity != null) { %>
+			<input type="hidden" name="quantity" value="<%=quantity%>"/>
+	<% 	}	%>
 	<div class="main-container">
 		<div class="main-wrap">
 			<section class="login-input-section-wrap">
