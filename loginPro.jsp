@@ -19,6 +19,7 @@
 	String pw = request.getParameter("pw");
 	String kinds = request.getParameter("kinds");
 	String auto = request.getParameter("auto"); //자동 로그인 체크 박스 값
+	String proNum = request.getParameter("proNum");
 	
 	//로그인 체크
 	MemberDAO loginDAO = new MemberDAO();	
@@ -31,24 +32,32 @@
 	// Cookie 생성
 	if(res){
 		if(auto != null){
-	Cookie c1 = new Cookie("autoId",id);
-	Cookie c2 = new Cookie("autoPw",pw);
-	Cookie c3 = new Cookie("autoCh",auto);
+			Cookie c1 = new Cookie("autoId",id);
+			Cookie c2 = new Cookie("autoPw",pw);
+			Cookie c3 = new Cookie("autoCh",auto);
 	
-	c1.setMaxAge(60*60*24); // 24시간
-	c2.setMaxAge(60*60*24); // 24시간
-	c3.setMaxAge(60*60*24); // 24시간
+			c1.setMaxAge(60*60*24); // 24시간
+			c2.setMaxAge(60*60*24); // 24시간
+			c3.setMaxAge(60*60*24); // 24시간
 	
-	response.addCookie(c1);
-	response.addCookie(c2);
-	response.addCookie(c3);
+			response.addCookie(c1);
+			response.addCookie(c2);
+			response.addCookie(c3);
 		}
 		if(kinds.equals("member")){
 			session.setAttribute("memId", id);
-			response.sendRedirect("main.jsp");
+			if(request.getParameter("proNum") != null) { // 상품구매하기에서 왔을시 상품상세로
+		 		response.sendRedirect("/team05/product/productContent.jsp?proNum=" + proNum);
+			} else {
+				response.sendRedirect("main.jsp");
+			}
 		} else if(kinds.equals("seller")){	
 			session.setAttribute("selId", id);
-			response.sendRedirect("selllerMain.jsp");
+			if(request.getParameter("proNum") != null) { // 상품구매하기에서 왔을시 상품상세로
+		 		response.sendRedirect("/team05/product/productContent.jsp?proNum=" + proNum);
+			} else {
+				response.sendRedirect("/team05/seller/sellerMain.jsp");
+			}
 		}
 	}else{
 %>

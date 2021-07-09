@@ -7,9 +7,15 @@
 		<title> :::: team05 login Form ::::</title>
 		<link href="loginForm.css" rel="stylesheet" type="text/css" > <!-- 로그인 css 연결 -->
 	</head>
-	
+	<%
+		request.setCharacterEncoding("UTF-8");
+		String proNum = request.getParameter("proNum");
+	%>
 <body>
-<form action="loginPro.jsp" method="get"> 
+<form action="loginPro.jsp" method="get">
+<%	if(proNum != null) { %>
+			<input type="hidden" name="proNum" value="<%=proNum%>"/>
+<% 	}	%>
 	<div class="main-container">
 		<div class="main-wrap">
 			<section class="login-input-section-wrap">
