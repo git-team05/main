@@ -8,7 +8,7 @@
 	<link href="/team05/main/main.css" rel="stylesheet" type="text/css" >			
 </head>
 <body>
-<table>
+	<table>
 		<tr>
 			<td>
 			<a href="/team05/main/main.jsp">로고</a>
@@ -44,5 +44,6 @@
 			<%} %>
 			</td>
 		</tr>		
+	</table>
 </body>
 </html>
