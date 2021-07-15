@@ -11,7 +11,9 @@
 	<table>
 		<tr>
 			<td>
-			<a href="/team05/main/main.jsp">로고</a>
+			<a href="/team05/main/main.jsp">
+				<img src="/team05/imgs/Logo.png" width="90"/>
+			</a>
 			<a href="/team05/product/groupMain.jsp">공동구매</a>
 			<a href="/team05/comming/commingSoonMain.jsp">오픈예정</a>
 			<a href="/team05/admin/opensellMain.jsp">공구요청</a>
@@ -19,12 +21,12 @@
 			
 			<%-- 상품명/태그 검색 --%>
 			<td>
-			<form action="/team05/product/groupSearch.jsp">
+			<form action="/team05/product/groupSearch.jsp" method="post">
 				<select name="sel">
 					<option value="proName">상품명</option>
 					<option value="tags">태그</option> 
 				</select>
-					<input type="text" name="search" />
+					<input type="text" name="search" required />
 					<input type="submit" value="검색" />
 			</form>
 			</td>
